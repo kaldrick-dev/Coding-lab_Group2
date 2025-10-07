@@ -28,7 +28,6 @@ done
 
 echo "You selected: $logname ($logfile)"
 
-<<<<<<< HEAD
 mkdir -p reports
 REPORT_FILE="reports/analysis_report.txt"
 
@@ -52,5 +51,3 @@ echo "Last entry: $LAST" >> "$REPORT_FILE"
 
 echo "------------------------------" >> "$REPORT_FILE"
 echo "✅ Analysis complete. Results saved to $REPORT_FILE"
-=======
->>>>>>> ad9412d5d91358f89ee332537687e237c0e674a4
