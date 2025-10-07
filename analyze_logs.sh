@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 while  true; do
 
     echo "Select log file to analyze:"
@@ -10,15 +9,15 @@ while  true; do
     read -p "Please enter choice (1-3): " choice
 
     if [ "$choice" = "1" ]; then
-        logfile="heart_rate.log"
+        logfile="heart_rate_log.log"
         logname="Heart Rate"
         break
     elif [ "$choice" = "2" ]; then
-        logfile="temperature.log"
+        logfile="temperature_log.log"
         logname="Temperature"
         break
     elif [ "$choice" = "3" ]; then
-        logfile="water_usage.log"
+        logfile="water_usage_log.log"
         logname="Water Usage"
         break
     else
@@ -28,13 +27,14 @@ done
 
 echo "You selected: $logname ($logfile)"
 
+cd hospital_data || exit 1
 mkdir -p reports
 REPORT_FILE="reports/analysis_report.txt"
 
-FILE="hospital_data/active_logs/$logfile"
+FILE="active_logs/$logfile"
 
 if [ ! -f "$FILE" ]; then
-    echo "⚠️ Error: Log file not found: $FILE"
+    echo "Error: Log file not found: $FILE"
     exit 1
 fi
 
@@ -50,4 +50,4 @@ echo "First entry: $FIRST" >> "$REPORT_FILE"
 echo "Last entry: $LAST" >> "$REPORT_FILE"
 
 echo "------------------------------" >> "$REPORT_FILE"
-echo "✅ Analysis complete. Results saved to $REPORT_FILE"
+echo "Analysis complete. Results saved to $REPORT_FILE"
