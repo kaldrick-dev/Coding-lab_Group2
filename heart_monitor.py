@@ -53,4 +53,4 @@ if __name__ == "__main__":
     elif sys.argv[1] == "stop":
         stop()
     else:
-        print("Invalid command. Use 'start' or 'stop'.")
+        print("Invalid command. Use 'start' or 'finish'.")
