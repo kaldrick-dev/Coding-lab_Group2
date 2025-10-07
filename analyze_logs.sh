@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 while true; do
     echo "Select log file to analyze:"
     echo "1) Heart Rate (heart_rate.log)"
