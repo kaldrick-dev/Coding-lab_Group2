@@ -6,7 +6,7 @@ while true; do
     echo "1) Heart Rate (heart_rate.log)"
     echo "2) Temperature (temperature.log)"
     echo "3) Water Usage (water_usage.log)"
-    read -p "Enter choice (1-3): " choice
+    read -p "Please enter choice (1-3): " choice
 
     if [ "$choice" = "1" ]; then
         logfile="heart_rate.log"
@@ -26,3 +26,4 @@ while true; do
 done
 
 echo "You selected: $logname ($logfile)"
+
